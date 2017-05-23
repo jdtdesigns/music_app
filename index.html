@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Song App</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+	<link href="https://cdn.quilljs.com/1.2.4/quill.snow.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<nav class="nav has-shadow">
+	  <div class="container">
+	    <div class="nav-left">
+	      <a class="nav-item">
+	        <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+	      </a>
+	      <a class="nav-item is-tab is-hidden-mobile is-active">Home</a>
+	    </div>
+	    <span class="nav-toggle">
+	      <span></span>
+	      <span></span>
+	      <span></span>
+	    </span>
+	    <div class="nav-right nav-menu">
+	      <a class="nav-item is-tab is-hidden-tablet is-active">Home</a>
+	      <a href="#" id="add" class="nav-item is-tab">Add Song</a>
+	      <a href="#" id="log" class="nav-item is-tab">Log In</a>
+	    </div>
+	  </div>
+	</nav>
+
+	<div class="input-form hide columns">
+		<div class="column is-4 is-offset-4">
+			<h1 class="title is-3">Add Song</h1>
+			<form >
+				<div class="field">
+				  <label class="label">Title</label>
+				  <p class="control">
+				    <input id="title" class="input" type="text">
+				  </p>
+				</div>
+
+				<div class="field">
+				  <label class="label">Writer</label>
+				  <p class="control">
+				    <input id="writer" class="input" type="text">
+				  </p>
+				</div>
+
+				<div class="field">
+				  <label class="label">Lyrics</label>
+				  <div id="editor"></div>
+
+				</div>
+
+				
+				<div class="field is-grouped">
+				  <p class="control">
+				    <button id="submit" class="button is-primary">Submit</button>
+				  </p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	  	apiKey: "AIzaSyBGtJ-gGN7zILR63WzEAMrqIEqyUu_X2ms",
+	  	authDomain: "test-89dcf.firebaseapp.com",
+	  	databaseURL: "https://test-89dcf.firebaseio.com",
+	  	projectId: "test-89dcf",
+	  	storageBucket: "test-89dcf.appspot.com",
+	  	messagingSenderId: "54325392709"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.2.4/quill.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/music.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

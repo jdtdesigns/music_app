@@ -1,0 +1,17 @@
+#add {
+  display: none; }
+
+.input-form {
+  margin-top: 35px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  height: 100%;
+  width: 100%; }
+  .input-form.hide {
+    display: none !important; }
+
+.ql-editor {
+  min-height: 180px; }
